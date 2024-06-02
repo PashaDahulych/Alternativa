@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240601194204">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240602134756">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -117,7 +117,7 @@
 						<li class="header__decor"></li>
 						<li><a lang="en" href="#">RU</a></li>
 					</ul>
-					<button data-da=".menu__body,991.98" type="button" class="header__border-btn border-btn">
+					<button data-da=".menu__body,991.98" data-popup="#popup" type="button" class="header__border-btn border-btn">
 						Записатися на прийом
 					</button>
 				</div>
@@ -543,7 +543,55 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240601194204"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<h2>Записатися на прийом</h2>
+					<p>Введіть дані для запису на прийом</p>
+					<form action="#" method="POST" class="popup__form">
+						<div class="popup__form-body">
+							<div class="popup__lines">
+								<div class="popup__line">
+									<label for="userName">Ім’я <span>*</span></label>
+									<input id="userName" type="text" name="User name" data-error="Error" autocomplete="off" required class="input" />
+								</div>
+								<div class="popup__line">
+									<label for="userPhone">Телефон <span>*</span></label>
+									<input id="userPhone" type="tel" name="User phone number" data-error="Error" autocomplete="off" required class="input" />
+								</div>
+								<div class="popup__select">
+									<label for="city">Місто <span>*</span></label>
+									<select id="city" required name="city" data-class-modif="form">
+										<option value="" selected>Місто</option>
+										<option value="1">Харків</option>
+										<option value="2">Львів</option>
+										<option value="3">Кременчук</option>
+									</select>
+
+								</div>
+							</div>
+							<div class="popup__message">
+								<label for="message">Коментар</label>
+								<textarea id="message" autocomplete="off" name="message" data-error="Error" class="input"></textarea>
+							</div>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__btn btn">
+								Записатися на прийом
+							</button>
+							<button type="reset" class="popup__reset link">
+								Скасувати
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20240602134756"></script>
 </body>
 
 </html>

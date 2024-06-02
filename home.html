@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240601194204">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240602134756">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,13 +86,6 @@
 											</a>
 										</li>
 									</ul>
-									<!-- data-class-modif="form" -->
-									<!-- <select name="Медичні центри" >
-								<option value="1" data-href="index.html" selected>Mедичні центри</option>
-								<option value="2">Пункт №2</option>
-								<option value="3">Пункт №3</option>
-								<option value="4">Пункт №4</option>
-							</select> -->
 								</li>
 								<li class="menu__item">
 									<a href="#" class="menu__link">Питання</a>
@@ -114,7 +107,7 @@
 						<li class="header__decor"></li>
 						<li><a lang="en" href="#">RU</a></li>
 					</ul>
-					<button data-da=".menu__body,991.98" type="button" class="header__border-btn border-btn">
+					<button data-da=".menu__body,991.98" data-popup="#popup" type="button" class="header__border-btn border-btn">
 						Записатися на прийом
 					</button>
 				</div>
@@ -444,9 +437,9 @@
 					</div>
 				</div>
 			</section>
-			<section class="blog">
-				<div class="blog__container">
-					<div class="blog__header header-block">
+			<section class="our-blog">
+				<div class="our-blog__container">
+					<div class="our-blog__header header-block">
 						<h2 class="header-block__ttl ttl">Блог</h2>
 						<div class="header-block__text text">
 							<p>
@@ -456,20 +449,20 @@
 							</p>
 						</div>
 					</div>
-					<ul class="blog__list">
-						<li class="blog__small">
-							<article class="blog__article">
+					<ul class="our-blog__list">
+						<li class="our-blog__small">
+							<article class="our-blog__article">
 								<figure>
 									<img src="img/blog/image_01.webp" alt="image" />
 								</figure>
-								<div class="blog__body">
+								<div class="our-blog__body">
 									<header>
-										<h3 class="blog__sub-ttl">
+										<h3 class="our-blog__sub-ttl">
 											Звертайтеся за допомогою та
 											залишайте свої заявки
 										</h3>
 									</header>
-									<section class="blog__text">
+									<section class="our-blog__text">
 										<p>
 											Медичний центр «Альтернатива»,
 											МЦ «Інновація» та Харківський
@@ -481,23 +474,23 @@
 											ситуації та людям похилого віку.
 										</p>
 									</section>
-									<a href="#" class="blog__link link _icon-swipe-arr">Читати далі</a>
+									<a href="#" class="our-blog__link link _icon-swipe-arr">Читати далі</a>
 								</div>
 							</article>
 						</li>
-						<li class="blog__small">
-							<article class="blog__article">
+						<li class="our-blog__small">
+							<article class="our-blog__article">
 								<figure>
 									<img src="img/blog/image_02.webp" alt="image" />
 								</figure>
-								<div class="blog__body">
+								<div class="our-blog__body">
 									<header>
-										<h3 class="blog__sub-ttl">
+										<h3 class="our-blog__sub-ttl">
 											Допомогаємо та підтримуємо наших
 											захисників
 										</h3>
 									</header>
-									<section class="blog__text">
+									<section class="our-blog__text">
 										<p>
 											Медичні центри «Альтернатива» та
 											«Інновація» продовжують
@@ -507,29 +500,29 @@
 											спокій.
 										</p>
 									</section>
-									<a href="#" class="blog__link link _icon-swipe-arr">Читати далі</a>
+									<a href="#" class="our-blog__link link _icon-swipe-arr">Читати далі</a>
 								</div>
 							</article>
 						</li>
-						<li class="blog__big">
-							<article class="blog__article">
+						<li class="our-blog__big">
+							<article class="our-blog__article">
 								<figure>
 									<img src="img/blog/image_03.webp" alt="image" />
 								</figure>
-								<div class="blog__body">
+								<div class="our-blog__body">
 									<header>
-										<h3 class="blog__sub-ttl">
+										<h3 class="our-blog__sub-ttl">
 											Співпрацюємо для підтримки
 											Харків’ян
 										</h3>
 									</header>
-									<section class="blog__text">
+									<section class="our-blog__text">
 										<p>
 											Дякуємо <a href="#">Церква «Свята Трійця»</a> та особисто <a href="#">Іллі Герасиму</a> і <a href="#">Петру Лобойко</a> за надання гуманітарної
 											допомоги для нужденних.
 										</p>
 									</section>
-									<a href="#" class="blog__link link _icon-swipe-arr">Читати далі</a>
+									<a href="#" class="our-blog__link link _icon-swipe-arr">Читати далі</a>
 								</div>
 							</article>
 						</li>
@@ -638,8 +631,57 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
-	<script src="js/app.min.js?_v=20240601194204"></script>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__text">
+					<h2>Записатися на прийом</h2>
+					<p>Введіть дані для запису на прийом</p>
+					<form action="#" method="POST" class="popup__form">
+						<div class="popup__form-body">
+							<div class="popup__lines">
+								<div class="popup__line">
+									<label for="userName">Ім’я <span>*</span></label>
+									<input id="userName" type="text" name="User name" data-error="Error" autocomplete="off" required class="input" />
+								</div>
+								<div class="popup__line">
+									<label for="userPhone">Телефон <span>*</span></label>
+									<input id="userPhone" type="tel" name="User phone number" data-error="Error" autocomplete="off" required class="input" />
+								</div>
+								<div class="popup__select">
+									<label for="city">Місто <span>*</span></label>
+									<select id="city" required name="city" data-class-modif="form">
+										<option value="" selected>Місто</option>
+										<option value="1">Харків</option>
+										<option value="2">Львів</option>
+										<option value="3">Кременчук</option>
+									</select>
+
+								</div>
+							</div>
+							<div class="popup__message">
+								<label for="message">Коментар</label>
+								<textarea id="message" autocomplete="off" name="message" data-error="Error" class="input"></textarea>
+							</div>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__btn btn">
+								Записатися на прийом
+							</button>
+							<button type="reset" class="popup__reset link">
+								Скасувати
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20240602134756"></script>
 </body>
 
 </html>
