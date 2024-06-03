@@ -4908,19 +4908,24 @@
     }));
     document.addEventListener("DOMContentLoaded", (function() {
         const dropdown = document.querySelector(".tabs__dropdown");
-        const select = dropdown.querySelector(".tabs__select");
+        if (!dropdown) return;
+        const selectDr = dropdown.querySelector(".tabs__select");
         const caret = dropdown.querySelector(".tabs__caret");
         const menu = dropdown.querySelector(".tabs__navigation");
         const options = dropdown.querySelectorAll(".tabs__title");
         const selected = dropdown.querySelector(".tabs__selected");
+        if (!selectDr || !caret || !menu || !selected) {
+            console.error("One or more required elements not found");
+            return;
+        }
         function handleSelectClick() {
-            select.classList.toggle("select-clicked");
+            selectDr.classList.toggle("select-clicked");
             caret.classList.toggle("caret-rotate");
             menu.classList.toggle("menu-active");
         }
         function handleOptionClick(event) {
             selected.innerText = event.target.innerText;
-            select.classList.remove("select-clicked");
+            selectDr.classList.remove("select-clicked");
             caret.classList.remove("caret-rotate");
             menu.classList.remove("menu-active");
             options.forEach((option => {
@@ -4929,13 +4934,13 @@
             event.target.classList.add("active");
         }
         function addEventListeners() {
-            select.addEventListener("click", handleSelectClick);
+            selectDr.addEventListener("click", handleSelectClick);
             options.forEach((option => {
                 option.addEventListener("click", handleOptionClick);
             }));
         }
         function removeEventListeners() {
-            select.removeEventListener("click", handleSelectClick);
+            selectDr.removeEventListener("click", handleSelectClick);
             options.forEach((option => {
                 option.removeEventListener("click", handleOptionClick);
             }));

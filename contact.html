@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240602134756">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240604010243">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,7 +36,7 @@
 						</a>
 					</li>
 					<li>
-						<button type="button" class="header__log-in">
+						<button data-popup="#login" type="button" class="header__log-in">
 							<img src="img/icons/accaunt.svg" alt="icon" />
 						</button>
 					</li>
@@ -569,7 +569,6 @@
 										<option value="2">Львів</option>
 										<option value="3">Кременчук</option>
 									</select>
-
 								</div>
 							</div>
 							<div class="popup__message">
@@ -591,7 +590,44 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20240602134756"></script>
+	<div id="login" aria-hidden="true" class="popup popup--login">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<form action="#" method="POST" class="popup__login">
+					<div class="popup__header">
+						<h2>Увійти до особистого кабінету</h2>
+						<p>
+							Введіть ваші особисті дані. Всі введені дані
+							конфіденційні
+						</p>
+					</div>
+					<div class="popup__body">
+						<div class="popup__l-lines">
+							<div class="popup__l-login">
+								<label for="cardNumber">Номер карти <span>*</span></label>
+								<input id="cardNumber" type="text" name="`User card number" data-error="Error" autocomplete="off" required class="input" />
+							</div>
+							<div class="popup__l-password">
+								<label for="userPassword">Пароль <span>*</span></label>
+								<div class="popup__inp-line">
+									<input id="userPassword" type="password" name="User password" data-error="Error" autocomplete="off" required class="input" />
+									<button type="button" class="eye">
+										<img src="img/icons/eye.svg" alt="icon" />
+									</button>
+								</div>
+							</div>
+						</div>
+						<button type="submit" class="popup__l-btn btn">
+							Увійти
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20240604010243"></script>
 </body>
 
 </html>
