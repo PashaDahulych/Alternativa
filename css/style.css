@@ -979,7 +979,8 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .25rem
+  gap: .25rem;
+  padding: 1.125rem .625rem
 }
 .menu__link.open {
   color: var(--button)
@@ -2916,7 +2917,7 @@ html.touch .menu__sub-list.open {
 }
 @media (min-width:991.98px) and (min-width:87.5em) {
   .menu__link.arrow {
-    padding-top: 1.21875rem
+    padding-top: 1.125rem
   }
   .menu__link.arrow {
     padding-right: 1.25rem
@@ -2927,7 +2928,7 @@ html.touch .menu__sub-list.open {
 }
 @media (min-width:991.98px) and (min-width:90em) {
   .menu__link.arrow {
-    padding-bottom: 1.21875rem
+    padding-bottom: 1.125rem
   }
 }
 @media (min-width:991.98px) and (min-width:83.75em) {
@@ -4225,14 +4226,14 @@ html.touch .menu__sub-list.open {
   }
 }
 @media (min-width:991.98px) and (min-width:68.75em) and (max-width:87.5em) {
-  @supports (padding-top:clamp(0.625rem ,-1.5520833333rem + 3.1666666667vw ,1.21875rem)) {
+  @supports (padding-top:clamp(0.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-top: clamp(.625rem ,-1.5520833333rem + 3.1666666667vw ,1.21875rem)
+      padding-top: clamp(.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)
     }
   }
-  @supports not (padding-top:clamp(0.625rem ,-1.5520833333rem + 3.1666666667vw ,1.21875rem)) {
+  @supports not (padding-top:clamp(0.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-top: calc(.625rem + .59375 * (100vw - 68.75rem)/ 18.75)
+      padding-top: calc(.625rem + .5 * (100vw - 68.75rem)/ 18.75)
     }
   }
 }
@@ -4248,14 +4249,14 @@ html.touch .menu__sub-list.open {
   }
 }
 @media (min-width:991.98px) and (min-width:68.75em) and (max-width:90em) {
-  @supports (padding-bottom:clamp(0.625rem ,-1.2959558824rem + 2.7941176471vw ,1.21875rem)) {
+  @supports (padding-bottom:clamp(0.625rem ,-0.9926470588rem + 2.3529411765vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-bottom: clamp(.625rem ,-1.2959558824rem + 2.7941176471vw ,1.21875rem)
+      padding-bottom: clamp(.625rem ,-.9926470588rem + 2.3529411765vw ,1.125rem)
     }
   }
-  @supports not (padding-bottom:clamp(0.625rem ,-1.2959558824rem + 2.7941176471vw ,1.21875rem)) {
+  @supports not (padding-bottom:clamp(0.625rem ,-0.9926470588rem + 2.3529411765vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-bottom: calc(.625rem + .59375 * (100vw - 68.75rem)/ 21.25)
+      padding-bottom: calc(.625rem + .5 * (100vw - 68.75rem)/ 21.25)
     }
   }
 }
