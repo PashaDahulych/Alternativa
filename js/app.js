@@ -1,43 +1,6 @@
 (() => {
     "use strict";
     const modules_flsModules = {};
-    let isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
-        }
-    };
-    function addTouchClass() {
-        if (isMobile.any()) {
-            document.documentElement.classList.add("touch");
-            let arrow = document.querySelectorAll(".menu__arrow");
-            for (let i = 0; i < arrow.length; i++) {
-                let thisLink = arrow[i].previousElementSibling;
-                let subMenu = arrow[i].nextElementSibling;
-                let thisArrow = arrow[i];
-                thisLink.classList.add("arrow");
-                arrow[i].addEventListener("click", (function() {
-                    subMenu.classList.toggle("open");
-                    thisArrow.classList.toggle("active");
-                    if (thisArrow.classList.contains("active")) thisArrow.previousElementSibling.style.color = "#fd6862"; else thisArrow.previousElementSibling.style.color = "#4f4e68";
-                }));
-            }
-        } else document.documentElement.classList.add("mouse");
-    }
     function functions_getHash() {
         if (location.hash) return location.hash.replace("#", "");
     }
@@ -4952,8 +4915,17 @@
         mediaQuery.addEventListener("change", handleScreenSizeChange);
         handleScreenSizeChange(mediaQuery);
     }));
+    function touchClick() {
+        const buttonList = document.querySelectorAll(".menu__link");
+        for (const btn of buttonList) btn.onclick = function() {
+            btn.classList.toggle("open");
+            btn.parentElement.classList.toggle("open");
+        };
+    }
+    window.onload = function() {
+        touchClick();
+    };
     window["FLS"] = true;
-    addTouchClass();
     menuInit();
     spollers();
     tabs();
