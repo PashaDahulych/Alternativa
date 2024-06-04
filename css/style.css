@@ -1005,7 +1005,7 @@ body::after {
   font-weight: 500;
   font-size: .875rem;
   text-align: center;
-  z-index: 5;
+  z-index: 2;
   background-color: var(--white)
 }
 .menu__sub-list li:not(:first-child) {
@@ -1044,12 +1044,6 @@ body::after {
 }
 .icon-menu {
   display: none
-}
-html.mouse .menu__item:hover .menu__sub-list {
-  display: block
-}
-html.touch .menu__sub-list.open {
-  display: block
 }
 .footer {
   border-radius: 0 var(--br) 0 0;
@@ -3193,7 +3187,7 @@ html.touch .menu__sub-list.open {
     width: 100%
   }
   .menu__link.arrow.open {
-    z-index: 5;
+    z-index: 3;
     border-radius: var(--br20);
     background-color: var(--white);
     box-shadow: 0 .375rem 1.6438rem 0 rgba(0,25,167,.1)
@@ -3213,6 +3207,7 @@ html.touch .menu__sub-list.open {
     padding-top: 2.5rem
   }
   .menu__mobile {
+    margin: -16px 0;
     position: sticky;
     top: 0;
     background-color: var(--white);
@@ -3221,6 +3216,22 @@ html.touch .menu__sub-list.open {
     text-align: center;
     padding-top: 2.5rem;
     padding-bottom: 1.5rem
+  }
+  .menu__mobile::after,
+  .menu__mobile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    z-index: 5;
+    background-color: var(--white)
+  }
+  .menu__mobile::before {
+    left: -40px
+  }
+  .menu__mobile::after {
+    right: -40px
   }
   .footer__top {
     flex-direction: column;
@@ -3370,10 +3381,6 @@ html.touch .menu__sub-list.open {
   }
 }
 @media (max-width:767.98px) {
-  .header__border-btn {
-    width: 100%;
-    justify-content: center
-  }
   .footer__logo {
     padding: 1.3125rem 0
   }
@@ -3499,6 +3506,12 @@ html.touch .menu__sub-list.open {
     flex-direction: column
   }
 }
+@media (max-width:390px) {
+  .header__border-btn {
+    width: 100%;
+    justify-content: center
+  }
+}
 @media (max-width:389px) {
   .about__list {
     padding: 1.25rem
@@ -3517,6 +3530,16 @@ html.touch .menu__sub-list.open {
 @media (max-width:350px) {
   .menu__body {
     padding: 0 .9375rem 2.5rem .9375rem
+  }
+  .menu__mobile::after,
+  .menu__mobile::before {
+    width: 15px
+  }
+  .menu__mobile::before {
+    left: -15px
+  }
+  .menu__mobile::after {
+    right: -15px
   }
 }
 @media (max-width:20em) {
