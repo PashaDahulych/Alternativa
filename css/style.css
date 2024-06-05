@@ -1600,7 +1600,7 @@ body::after {
   flex: 0 1 50%
 }
 .centers__sub-ttl:not(:last-child) {
-  margin-bottom: .5rem
+  margin-bottom: 32px
 }
 .centers__city {
   font-weight: 500;
@@ -3282,7 +3282,7 @@ body::after {
     text-align: center
   }
   .centers__city:not(:last-child) {
-    margin-bottom: 1.0625rem
+    margin-bottom: 32px
   }
   .centers__about {
     max-width: 14.75rem;
