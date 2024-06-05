@@ -1600,7 +1600,7 @@ body::after {
   flex: 0 1 50%
 }
 .centers__sub-ttl:not(:last-child) {
-  margin-bottom: 2.0625rem
+  margin-bottom: .5rem
 }
 .centers__city {
   font-weight: 500;
@@ -1846,7 +1846,7 @@ body::after {
   object-position: center
 }
 .doctors__card header > *:not(:last-child) {
-  margin-bottom: .3125rem
+  margin-bottom: .625rem
 }
 .doctors__card header h3 {
   font-weight: 700;
@@ -2760,6 +2760,9 @@ body::after {
     border-radius: 0 var(--br);
     padding: 2.5rem
   }
+  .centers__sub-ttl:not(:last-child) {
+    margin-bottom: 2.0625rem
+  }
   .centers__city {
     display: none
   }
@@ -2800,7 +2803,7 @@ body::after {
     margin-bottom: 3.3125rem
   }
   .doctors__card header > *:not(:last-child) {
-    margin-bottom: .3125rem
+    margin-bottom: .9375rem
   }
   .doctors__card header p {
     font-size: 1.25rem
@@ -3175,10 +3178,10 @@ body::after {
     right: 0
   }
   .menu__list {
-    max-width: 19.375rem;
+    padding-top: 1.875rem;
+    width: 310px;
     flex-direction: column;
-    gap: .25rem;
-    width: 100%
+    gap: .25rem
   }
   .menu__list:not(:last-child) {
     margin-bottom: 2.375rem
@@ -3194,8 +3197,8 @@ body::after {
   }
   .menu__link {
     padding: 1.21875rem .625rem;
-    width: 100%;
-    justify-content: center
+    justify-content: center;
+    width: 100%
   }
   .menu__sub-list {
     width: 100%;
@@ -3279,7 +3282,7 @@ body::after {
     text-align: center
   }
   .centers__city:not(:last-child) {
-    margin-bottom: 1.5rem
+    margin-bottom: 1.0625rem
   }
   .centers__about {
     max-width: 14.75rem;
@@ -3530,6 +3533,9 @@ body::after {
 @media (max-width:350px) {
   .menu__body {
     padding: 0 .9375rem 2.5rem .9375rem
+  }
+  .menu__list {
+    width: 100%
   }
   .menu__mobile::after,
   .menu__mobile::before {
