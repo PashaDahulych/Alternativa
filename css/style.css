@@ -2354,9 +2354,6 @@ body::after {
   .our-blog__article {
     padding-left: 2.5rem
   }
-  .centers__card {
-    gap: 3.75rem
-  }
   .our-services__card figure {
     height: 23.625rem
   }
@@ -2938,6 +2935,9 @@ body::after {
   }
   .branches .hero__container {
     padding-top: 14.375rem
+  }
+  .centers__card {
+    gap: 3.75rem
   }
   .contact {
     padding-top: 12.5rem
@@ -3682,9 +3682,6 @@ body::after {
   .testination__user {
     font-size: 1.25rem
   }
-  .centers__card {
-    gap: 1.5rem
-  }
   .our-services__card figure {
     height: 20rem
   }
@@ -3811,16 +3808,6 @@ body::after {
   @supports not (font-size:clamp(1.25rem ,0.9143561414rem + 0.6992762491vw ,1.5rem)) {
     .testination__user {
       font-size: calc(1.25rem + .25 * (100vw - 47.99875rem)/ 35.75125)
-    }
-  }
-  @supports (gap:clamp(1.5rem ,-1.5207947275rem + 6.2934862417vw ,3.75rem)) {
-    .centers__card {
-      gap: clamp(1.5rem ,-1.5207947275rem + 6.2934862417vw ,3.75rem)
-    }
-  }
-  @supports not (gap:clamp(1.5rem ,-1.5207947275rem + 6.2934862417vw ,3.75rem)) {
-    .centers__card {
-      gap: calc(1.5rem + 2.25 * (100vw - 47.99875rem)/ 35.75125)
     }
   }
   @supports (height:clamp(20rem ,15.1331640502rem + 10.1395056117vw ,23.625rem)) {
@@ -4409,6 +4396,16 @@ body::after {
       padding-top: calc(11.25rem + 3.125 * (100vw - 61.99875rem)/ 21.75125)
     }
   }
+  @supports (gap:clamp(1.5rem ,-4.9132952129rem + 10.3442330901vw ,3.75rem)) {
+    .centers__card {
+      gap: clamp(1.5rem ,-4.9132952129rem + 10.3442330901vw ,3.75rem)
+    }
+  }
+  @supports not (gap:clamp(1.5rem ,-4.9132952129rem + 10.3442330901vw ,3.75rem)) {
+    .centers__card {
+      gap: calc(1.5rem + 2.25 * (100vw - 61.99875rem)/ 21.75125)
+    }
+  }
   @supports (padding-top:clamp(10.625rem ,5.2805873226rem + 8.6201942417vw ,12.5rem)) {
     .contact {
       padding-top: clamp(10.625rem ,5.2805873226rem + 8.6201942417vw ,12.5rem)
@@ -4456,6 +4453,9 @@ body::after {
   }
   .branches .hero__container {
     padding-top: 11.25rem
+  }
+  .centers__card {
+    gap: 1.5rem
   }
   .contact {
     padding-top: 10.625rem
