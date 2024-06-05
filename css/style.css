@@ -1600,7 +1600,7 @@ body::after {
   flex: 0 1 50%
 }
 .centers__sub-ttl:not(:last-child) {
-  margin-bottom: 32px
+  margin-bottom: .5rem
 }
 .centers__city {
   font-weight: 500;
@@ -1941,10 +1941,13 @@ body::after {
   display: inline-block
 }
 .contact .centers__partner:not(:last-child) {
-  margin-bottom: 1.875rem
+  margin-bottom: 1.5625rem
 }
 .contact .centers__about:not(:last-child) {
   margin-bottom: 1.25rem
+}
+.contact .centers__sub-ttl:not(:last-child) {
+  margin-bottom: 1.5625rem
 }
 .blog {
   padding-top: 4.375rem
@@ -3282,7 +3285,7 @@ body::after {
     text-align: center
   }
   .centers__city:not(:last-child) {
-    margin-bottom: 32px
+    margin-bottom: 1.0625rem
   }
   .centers__about {
     max-width: 14.75rem;
@@ -3643,7 +3646,7 @@ body::after {
     padding-left: 2.5rem
   }
   .hospitals__article {
-    padding-bottom: 2.5rem
+    padding-bottom: 2.125rem
   }
   .doctors__card {
     padding: .0000000625rem
@@ -4056,14 +4059,14 @@ body::after {
       padding-left: calc(2.5rem + 1.25 * (100vw - 61.99875rem)/ 21.75125)
     }
   }
-  @supports (padding-bottom:clamp(2.5rem ,-1.062941785rem + 5.7467961611vw ,3.75rem)) {
+  @supports (padding-bottom:clamp(2.125rem ,-2.5068243204rem + 7.4708350095vw ,3.75rem)) {
     .hospitals__article {
-      padding-bottom: clamp(2.5rem ,-1.062941785rem + 5.7467961611vw ,3.75rem)
+      padding-bottom: clamp(2.125rem ,-2.5068243204rem + 7.4708350095vw ,3.75rem)
     }
   }
-  @supports not (padding-bottom:clamp(2.5rem ,-1.062941785rem + 5.7467961611vw ,3.75rem)) {
+  @supports not (padding-bottom:clamp(2.125rem ,-2.5068243204rem + 7.4708350095vw ,3.75rem)) {
     .hospitals__article {
-      padding-bottom: calc(2.5rem + 1.25 * (100vw - 61.99875rem)/ 21.75125)
+      padding-bottom: calc(2.125rem + 1.625 * (100vw - 61.99875rem)/ 21.75125)
     }
   }
   @supports (padding:clamp(0.0000000625rem ,-7.1258833293rem + 11.4935920349vw ,2.5rem)) {
