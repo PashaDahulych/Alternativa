@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: GothamPro;
   font-display: swap;
@@ -1574,6 +1575,9 @@ body::after {
 .centers__container > *:not(:last-child) {
   margin-bottom: 2.0625rem
 }
+.centers__list.one {
+  grid-template-columns: 1fr
+}
 .centers__card {
   border: .0625rem solid var(--stroke);
   padding: 2.5rem 1.25rem;
@@ -2561,6 +2565,9 @@ body::after {
   .price__table tr td:last-of-type {
     font-weight: 700
   }
+  .contact .centers__partner:not(:last-child) {
+    margin-bottom: .625rem
+  }
   .blog .our-blog__about {
     padding-bottom: 5rem
   }
@@ -2764,8 +2771,7 @@ body::after {
   .centers__card {
     display: flex;
     align-items: center;
-    border-radius: 0 var(--br);
-    padding: 2.5rem
+    border-radius: 0 var(--br)
   }
   .centers__info {
     flex: 0 1 50%
@@ -2848,9 +2854,6 @@ body::after {
   }
   .contact .centers__city-label:not(:last-child) {
     margin-bottom: 2.5rem
-  }
-  .contact .centers__partner:not(:last-child) {
-    margin-bottom: .625rem
   }
   .blog .our-blog__about {
     padding-top: 3.75rem;
@@ -3288,8 +3291,22 @@ body::after {
   }
   .centers__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(2,1fr);
     gap: 1.25rem
+  }
+  .centers__list.one .centers__card {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem
+  }
+  .centers__list.one .centers__info {
+    flex: 0 1 50%
+  }
+  .centers__list.one .centers__sub-ttl {
+    text-align: left
+  }
+  .centers__list.one .centers__about {
+    margin: 0 0
   }
   .centers__card {
     display: flex;
@@ -3337,14 +3354,6 @@ body::after {
   }
   .contact__breadcrumbs {
     display: none
-  }
-  .contact .centers__about {
-    max-width: 14.75rem;
-    margin: 0 auto
-  }
-  .contact .centers__license {
-    display: block;
-    text-align: center
   }
   .blog__breadcrumbs {
     display: none
@@ -3505,6 +3514,20 @@ body::after {
   .centers__list {
     grid-template-columns: 1fr
   }
+  .centers__list.one .centers__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0
+  }
+  .centers__list.one .centers__info {
+    flex: 0 1 auto
+  }
+  .centers__list.one .centers__sub-ttl {
+    text-align: center
+  }
+  .centers__list.one .centers__about {
+    margin: 0 auto
+  }
   .our-services__item {
     flex-direction: column
   }
@@ -3517,6 +3540,14 @@ body::after {
   .doctors__card figure {
     aspect-ratio: 358/340;
     flex: 0 1 21.25rem
+  }
+  .contact .centers__about {
+    max-width: 14.75rem;
+    margin: 0 auto
+  }
+  .contact .centers__license {
+    display: block;
+    text-align: center
   }
   .questions__spollers .spollers__title {
     padding: 1.875rem 1.25rem
@@ -4529,6 +4560,9 @@ body::after {
 @media (min-width:767.98px) and (max-width:991.98px) {
   .centers__card {
     height: 100%
+  }
+  .contact .centers__wrapper .centers__card {
+    height: auto
   }
 }
 @media (min-width:767.98px) and (min-width:47.99875em) and (max-width:83.75em) {
