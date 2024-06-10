@@ -2000,11 +2000,6 @@ body::after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg)
 }
-.menu-active {
-  display: flex;
-  opacity: 1;
-  visibility: visible
-}
 .faqs {
   padding-top: 4.375rem
 }
@@ -3378,6 +3373,11 @@ body::after {
     background-color: var(--white);
     opacity: 0;
     visibility: hidden
+  }
+  .tabs__navigation.menu-active {
+    display: flex;
+    opacity: 1;
+    visibility: visible
   }
   .tabs__title {
     padding-top: 1.5rem;
