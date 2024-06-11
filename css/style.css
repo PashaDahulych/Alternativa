@@ -1896,7 +1896,8 @@ body::after {
 }
 .price__table tr th:last-of-type {
   text-align: right;
-  justify-content: flex-end
+  justify-content: flex-end;
+  color: var(--secondary)
 }
 .price__table tr td {
   display: flex;
@@ -3521,6 +3522,9 @@ body::after {
   }
   .centers__list.one .centers__info {
     flex: 0 1 auto
+  }
+  .centers__list.one .centers__info:not(:last-child) {
+    margin-bottom: 1.25rem
   }
   .centers__list.one .centers__sub-ttl {
     text-align: center
