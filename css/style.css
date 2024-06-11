@@ -882,9 +882,13 @@ body::after {
   transition: box-shadow .3s ease;
   padding: .625rem
 }
-.header__link::before {
-  color: var(--secondaryOpacity);
-  font-size: 1.5rem
+.header__link i {
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem
+}
+.header__link i img {
+  max-width: 100%
 }
 .header__link span {
   transition: color .3s ease
