@@ -2681,7 +2681,7 @@ body::after {
     display: none
   }
   .hero {
-    min-height: 100dvh
+    min-height: 51.25rem
   }
   .hero__container {
     min-height: 100dvh;
@@ -3071,6 +3071,15 @@ body::after {
   }
   .footer {
     border-radius: 0 var(--br100) 0 0
+  }
+}
+@media (min-width:1920px) {
+  .hero {
+    min-height: 100dvh
+  }
+  .hero__bg img {
+    -o-object-position: center bottom;
+    object-position: center bottom
   }
 }
 @media (max-width:1379px) {
@@ -4286,14 +4295,14 @@ body::after {
   }
 }
 @media (min-width:991.98px) and (min-width:68.75em) and (max-width:87.5em) {
-  @supports (padding-top:clamp(0.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)) {
+  @supports (padding-top:clamp(0.3125rem ,-2.6666666667rem + 4.3333333333vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-top: clamp(.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)
+      padding-top: clamp(.3125rem ,-2.6666666667rem + 4.3333333333vw ,1.125rem)
     }
   }
-  @supports not (padding-top:clamp(0.625rem ,-1.2083333333rem + 2.6666666667vw ,1.125rem)) {
+  @supports not (padding-top:clamp(0.3125rem ,-2.6666666667rem + 4.3333333333vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-top: calc(.625rem + .5 * (100vw - 68.75rem)/ 18.75)
+      padding-top: calc(.3125rem + .8125 * (100vw - 68.75rem)/ 18.75)
     }
   }
   @supports (padding-top:clamp(0.625rem ,-1.5520833333rem + 3.1666666667vw ,1.21875rem)) {
@@ -4319,10 +4328,10 @@ body::after {
 }
 @media (min-width:991.98px) and (max-width:68.75em) {
   .menu__link.arrow {
-    padding-top: .625rem
+    padding-top: .3125rem
   }
   .menu__link.arrow {
-    padding-bottom: .625rem
+    padding-bottom: .3125rem
   }
   .menu__link {
     padding-top: .625rem
@@ -4335,71 +4344,71 @@ body::after {
   }
 }
 @media (min-width:991.98px) and (min-width:68.75em) and (max-width:90em) {
-  @supports (padding-bottom:clamp(0.625rem ,-0.9926470588rem + 2.3529411765vw ,1.125rem)) {
+  @supports (padding-bottom:clamp(0.3125rem ,-2.3161764706rem + 3.8235294118vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-bottom: clamp(.625rem ,-.9926470588rem + 2.3529411765vw ,1.125rem)
+      padding-bottom: clamp(.3125rem ,-2.3161764706rem + 3.8235294118vw ,1.125rem)
     }
   }
-  @supports not (padding-bottom:clamp(0.625rem ,-0.9926470588rem + 2.3529411765vw ,1.125rem)) {
+  @supports not (padding-bottom:clamp(0.3125rem ,-2.3161764706rem + 3.8235294118vw ,1.125rem)) {
     .menu__link.arrow {
-      padding-bottom: calc(.625rem + .5 * (100vw - 68.75rem)/ 21.25)
+      padding-bottom: calc(.3125rem + .8125 * (100vw - 68.75rem)/ 21.25)
     }
   }
 }
 @media (min-width:991.98px) and (min-width:75em) and (max-width:87.5em) {
-  @supports (padding-right:clamp(0.625rem ,-3.125rem + 5vw ,1.25rem)) {
+  @supports (padding-right:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link.arrow {
-      padding-right: clamp(.625rem ,-3.125rem + 5vw ,1.25rem)
+      padding-right: clamp(.3125rem ,-5.3125rem + 7.5vw ,1.25rem)
     }
   }
-  @supports not (padding-right:clamp(0.625rem ,-3.125rem + 5vw ,1.25rem)) {
+  @supports not (padding-right:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link.arrow {
-      padding-right: calc(.625rem + .625 * (100vw - 75rem)/ 12.5)
+      padding-right: calc(.3125rem + .9375 * (100vw - 75rem)/ 12.5)
     }
   }
-  @supports (padding-left:clamp(0.625rem ,-3.125rem + 5vw ,1.25rem)) {
+  @supports (padding-left:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link.arrow {
-      padding-left: clamp(.625rem ,-3.125rem + 5vw ,1.25rem)
+      padding-left: clamp(.3125rem ,-5.3125rem + 7.5vw ,1.25rem)
     }
   }
-  @supports not (padding-left:clamp(0.625rem ,-3.125rem + 5vw ,1.25rem)) {
+  @supports not (padding-left:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link.arrow {
-      padding-left: calc(.625rem + .625 * (100vw - 75rem)/ 12.5)
+      padding-left: calc(.3125rem + .9375 * (100vw - 75rem)/ 12.5)
     }
   }
-  @supports (padding-right:clamp(0.125rem ,-6.625rem + 9vw ,1.25rem)) {
+  @supports (padding-right:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link {
-      padding-right: clamp(.125rem ,-6.625rem + 9vw ,1.25rem)
+      padding-right: clamp(.3125rem ,-5.3125rem + 7.5vw ,1.25rem)
     }
   }
-  @supports not (padding-right:clamp(0.125rem ,-6.625rem + 9vw ,1.25rem)) {
+  @supports not (padding-right:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link {
-      padding-right: calc(.125rem + 1.125 * (100vw - 75rem)/ 12.5)
+      padding-right: calc(.3125rem + .9375 * (100vw - 75rem)/ 12.5)
     }
   }
-  @supports (padding-left:clamp(0.125rem ,-6.625rem + 9vw ,1.25rem)) {
+  @supports (padding-left:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link {
-      padding-left: clamp(.125rem ,-6.625rem + 9vw ,1.25rem)
+      padding-left: clamp(.3125rem ,-5.3125rem + 7.5vw ,1.25rem)
     }
   }
-  @supports not (padding-left:clamp(0.125rem ,-6.625rem + 9vw ,1.25rem)) {
+  @supports not (padding-left:clamp(0.3125rem ,-5.3125rem + 7.5vw ,1.25rem)) {
     .menu__link {
-      padding-left: calc(.125rem + 1.125 * (100vw - 75rem)/ 12.5)
+      padding-left: calc(.3125rem + .9375 * (100vw - 75rem)/ 12.5)
     }
   }
 }
 @media (min-width:991.98px) and (max-width:75em) {
   .menu__link.arrow {
-    padding-right: .625rem
+    padding-right: .3125rem
   }
   .menu__link.arrow {
-    padding-left: .625rem
+    padding-left: .3125rem
   }
   .menu__link {
-    padding-right: .125rem
+    padding-right: .3125rem
   }
   .menu__link {
-    padding-left: .125rem
+    padding-left: .3125rem
   }
 }
 @media (min-width:991.98px) and (min-width:68.75em) and (max-width:83.75em) {
